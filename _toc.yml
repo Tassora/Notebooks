@@ -7,3 +7,7 @@ chapters:
 - file: 1.Python/0.Python.md
 #  sections:
 #  - file: 1.Python/1.Base/1.1.Introduction.md
+- file: 6.Tool/0.Tool.md
+  sections:
+  - file: 6.Tool/1.Git.md
+  - file: 6.Tool/2.Jupyterbook.md
