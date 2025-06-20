@@ -30,3 +30,9 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  theme:
+    name: pydata_sphinx_theme
+    options:
+      default_mode: light       # 默认使用亮色模式
+      toggle_switch: false      # 不显示暗色模式切换按钮
+
