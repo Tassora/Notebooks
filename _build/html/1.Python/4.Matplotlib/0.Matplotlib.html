@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>一、先导知识 &#8212; Tassora&#39;s Notebooks</title>
+    <title>Matplotlib &#8212; Tassora&#39;s Notebooks</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = '1.Python/1.Base/1.先导知识';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '1.Python/4.Matplotlib/0.Matplotlib';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="二、变量" href="2.%E5%8F%98%E9%87%8F.html" />
-    <link rel="prev" title="基础语法" href="0.Base.html" />
+    <link rel="next" title="Tool" href="../../6.Tool/0.Tool.html" />
+    <link rel="prev" title="Pandas" href="../3.Pandas/0.Pandas.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -181,13 +181,14 @@
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0.Python.html">Python</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="0.Base.html">基础语法</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">一、先导知识</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2.%E5%8F%98%E9%87%8F.html">二、变量</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../1.Base/0.Base.html">基础语法</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../1.Base/1.%E5%85%88%E5%AF%BC%E7%9F%A5%E8%AF%86.html">一、先导知识</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../1.Base/2.%E5%8F%98%E9%87%8F.html">二、变量</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../2.Numpy/0.Numpy.html">Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../3.Pandas/0.Pandas.html">Pandas</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Matplotlib</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../6.Tool/0.Tool.html">Tool</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -266,7 +267,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F1.Python/1.Base/1.先导知识.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F1.Python/4.Matplotlib/0.Matplotlib.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -296,7 +297,7 @@
       
       
       
-      <li><a href="../../_sources/1.Python/1.Base/1.先导知识.md" target="_blank"
+      <li><a href="../../_sources/1.Python/4.Matplotlib/0.Matplotlib.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -367,9 +368,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
@@ -380,28 +379,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>一、先导知识</h1>
+    <h1>Matplotlib</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1. 解释器和编译器的区别</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">2. Python的注释</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.1 单行注释</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2 多行注释（两种常用方式）</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">方法一：连续使用多行 <code class="docutils literal notranslate"><span class="pre">#</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">方法二：使用三引号（<code class="docutils literal notranslate"><span class="pre">'''</span></code> 或 <code class="docutils literal notranslate"><span class="pre">"""</span></code>）</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -411,97 +393,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>一、先导知识<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
-<section id="id2">
-<h2>1. 解释器和编译器的区别<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<ul class="simple">
-<li><p>编译器：将整个源代码一次性翻译成机器代码，生成可执行文件，之后运行时无需源代码。例如：C、C++</p></li>
-<li><p>解释器：逐行读取源代码，将其翻译成机器能理解的指令并立即执行，不生成独立的可执行文件。例如：Python</p></li>
-</ul>
-<div align="center">
-  <table style="border-collapse: collapse; width: 100%; text-align: center; font-size: 16px;">
-    <thead>
-      <tr style="background-color: #f2f2f2;">
-        <th style="border: 1px solid #ccc; padding: 10px;">区别点</th>
-        <th style="border: 1px solid #ccc; padding: 10px;">解释器</th>
-        <th style="border: 1px solid #ccc; padding: 10px;">编译器</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="border: 1px solid #ccc; padding: 10px;">执行方式</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">逐行解释执行</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">先整体编译成机器码后再执行</td>
-      </tr>
-      <tr style="background-color: #f9f9f9;">
-        <td style="border: 1px solid #ccc; padding: 10px;">生成文件</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">不生成独立的可执行文件</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">生成独立的可执行文件</td>
-      </tr>
-      <tr>
-        <td style="border: 1px solid #ccc; padding: 10px;">运行速度</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">较慢（每次运行都需重新解释）</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">较快（直接运行编译后的机器码）</td>
-      </tr>
-      <tr style="background-color: #f9f9f9;">
-        <td style="border: 1px solid #ccc; padding: 10px;">调试方便性</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">更加方便，容易定位和修改错误</td>
-        <td style="border: 1px solid #ccc; padding: 10px;">相对复杂，需重新编译</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-</section>
-<section id="python">
-<h2>2. Python的注释<a class="headerlink" href="#python" title="Link to this heading">#</a></h2>
-<p>  Python 提供 <strong>单行注释</strong> 与 <strong>多行注释</strong> 两种方式，主要用于说明代码逻辑、调试代码或屏蔽部分代码内容。</p>
-<section id="id3">
-<h3>2.1 单行注释<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>使用 <code class="docutils literal notranslate"><span class="pre">#</span></code> 开头</p></li>
-<li><p>注释符后面的内容在运行时会被解释器忽略</p></li>
-</ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 这是一个单行注释</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>  <span class="c1"># 输出语句</span>
-</pre></div>
-</div>
-</section>
-<section id="id4">
-<h3>2.2 多行注释（两种常用方式）<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
-<section id="id5">
-<h4>方法一：连续使用多行 <code class="docutils literal notranslate"><span class="pre">#</span></code><a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 这是多行注释</span>
-<span class="c1"># 可以用于注释掉多行说明</span>
-<span class="c1"># 或屏蔽多行代码</span>
-</pre></div>
-</div>
-</section>
-<section id="id6">
-<h4>方法二：使用三引号（<code class="docutils literal notranslate"><span class="pre">'''</span></code> 或 <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code>）<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">这是一个多行注释的例子</span>
-<span class="sd">通常用于说明模块、类或函数的用途</span>
-<span class="sd">解释器会将其视为字符串而忽略</span>
-<span class="sd">&#39;&#39;&#39;</span>
-</pre></div>
-</div>
-<div style="
-  border-left: 4px solid #007acc;
-  background-color: #eef6fb;
-  padding: 16px 20px;
-  margin: 20px 0;
-  color: #003b5c;
-  font-family: 'Times New Roman', serif;
-  font-size: 16px;
-  line-height: 1.6;
-  border-radius: 4px;
-">
-  <strong>📌 快捷键：</strong> 选中指定行后使用 <code>Ctrl + /</code> 添加或取消注释
-</div>
-</section>
-</section>
-</section>
+  <section class="tex2jax_ignore mathjax_ignore" id="matplotlib">
+<h1>Matplotlib<a class="headerlink" href="#matplotlib" title="Link to this heading">#</a></h1>
+<p>  Matplotlib 是 Python 中最常用的绘图库，本节将重点学习如何利用 Matplotlib 进行数据可视化。内容涵盖基本绘图函数的使用，如折线图、散点图、柱状图和饼图等；图形的定制化设置，包括坐标轴标签、标题、图例、颜色和样式调整；多图布局与子图管理；以及高级绘图技巧，如动画绘制和交互式图表。此外，还将介绍与 Pandas 和 NumPy 的结合使用，帮助实现高效且美观的数据展示。</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -517,7 +411,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./1.Python\1.Base"
+            path: "./1.Python\4.Matplotlib"
         },
         predefinedOutput: true
     }
@@ -535,20 +429,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="0.Base.html"
+       href="../3.Pandas/0.Pandas.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">基础语法</p>
+        <p class="prev-next-title">Pandas</p>
       </div>
     </a>
     <a class="right-next"
-       href="2.%E5%8F%98%E9%87%8F.html"
+       href="../../6.Tool/0.Tool.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">二、变量</p>
+        <p class="prev-next-title">Tool</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -558,30 +452,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1. 解释器和编译器的区别</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">2. Python的注释</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.1 单行注释</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2 多行注释（两种常用方式）</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">方法一：连续使用多行 <code class="docutils literal notranslate"><span class="pre">#</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">方法二：使用三引号（<code class="docutils literal notranslate"><span class="pre">'''</span></code> 或 <code class="docutils literal notranslate"><span class="pre">"""</span></code>）</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>
