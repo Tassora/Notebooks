@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>一、先导知识 &#8212; Tassora&#39;s Notebooks</title>
+    <title>先导知识 &#8212; Tassora&#39;s Notebooks</title>
   
   
   
@@ -60,7 +60,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = '1.Python/1.Base/1.先导知识';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="二、变量" href="2.%E5%8F%98%E9%87%8F.html" />
+    <link rel="next" title="变量" href="2.%E5%8F%98%E9%87%8F.html" />
     <link rel="prev" title="基础语法" href="0.Base.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -182,12 +182,14 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../0.Python.html">Python</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="0.Base.html">基础语法</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">一、先导知识</a></li>
-<li class="toctree-l3"><a class="reference internal" href="2.%E5%8F%98%E9%87%8F.html">二、变量</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">先导知识</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2.%E5%8F%98%E9%87%8F.html">变量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3.%E8%BF%90%E7%AE%97%E7%AC%A6.html">运算符</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../2.Numpy/0.Numpy.html">Numpy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../3.Pandas/0.Pandas.html">Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../4.Matplotlib/0.Matplotlib.html">Matplotlib</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../6.Tool/0.Tool.html">Tool</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -380,7 +382,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>一、先导知识</h1>
+    <h1>先导知识</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -400,6 +402,16 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3. Python的输出</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.1 输出单个值</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2 输出多个值（逗号分隔）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">3.3 换行输出 与 不换行输出</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3.4 格式化输出（%格式）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-string">3.5 插值表达式（f-string）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">3.6 小结</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">4. Python的输入</a></li>
 </ul>
             </nav>
         </div>
@@ -412,7 +424,7 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>一、先导知识<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<h1>先导知识<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
 <h2>1. 解释器和编译器的区别<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <ul class="simple">
@@ -502,6 +514,159 @@ document.write(`
 </section>
 </section>
 </section>
+<section id="id7">
+<h2>3. Python的输出<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>  Python 使用内置的 <code class="docutils literal notranslate"><span class="pre">print()</span></code> 函数将数据输出到控制台，支持输出文本、变量、表达式结果等内容。</p>
+<section id="id8">
+<h3>3.1 输出单个值<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hello, world!
+</pre></div>
+</div>
+</section>
+<section id="id9">
+<h3>3.2 输出多个值（逗号分隔）<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a =&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;, b =&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span> <span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+</pre></div>
+</div>
+<div style="
+  border-left: 4px solid #007acc;
+  background-color: #eef6fb;
+  padding: 16px 20px;
+  margin: 20px 0;
+  color: #003b5c;
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  border-radius: 4px;
+">
+  <strong>📌 多个输出项之间默认用空格隔开。</strong>
+</div>
+</section>
+<section id="id10">
+<h3>3.3 换行输出 与 不换行输出<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p><strong>默认换行输出：</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;第一行&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;第二行&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">第一行</span>
+<span class="n">第二行</span>
+</pre></div>
+</div>
+<p><strong>不换行输出（通过 <code class="docutils literal notranslate"><span class="pre">end</span></code> 参数）：</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;第一行&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;第二行&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">第一行</span> <span class="n">第二行</span>
+</pre></div>
+</div>
+<div style="
+  border-left: 4px solid #007acc;
+  background-color: #eef6fb;
+  padding: 16px 20px;
+  margin: 20px 0;
+  color: #003b5c;
+  font-family: 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.6;
+  border-radius: 4px;
+">
+  <strong>📌 `end` 的默认值为 <code>"\n"</code>，可设置为 <code>" "</code>、<code>","</code> 等来自定义结尾符。</strong>
+</div>
+</section>
+<section id="id11">
+<h3>3.4 格式化输出（%格式）<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+<span class="n">score</span> <span class="o">=</span> <span class="mf">95.5</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;姓名：</span><span class="si">%s</span><span class="s2">，成绩：</span><span class="si">%.1f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">score</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>姓名：Alice，成绩：95.5
+</pre></div>
+</div>
+<p>格式说明：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">%s</span></code>：字符串</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%d</span></code>：整数</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%5d</span></code>：整数（期望得到5位数的整数，前面补充空格）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%05d</span></code>：整数（期望得到5位数的整数，前面补充0）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%f</span></code>：浮点数（默认 6 位小数）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">%.1f</span></code>：浮点数，保留 1 位小数</p></li>
+</ul>
+</section>
+<section id="f-string">
+<h3>3.5 插值表达式（f-string）<a class="headerlink" href="#f-string" title="Link to this heading">#</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Bob&quot;</span>
+<span class="n">high</span> <span class="o">=</span> <span class="mf">180.58</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> 的身高是 </span><span class="si">{</span><span class="n">high</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> cm&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Bob</span> <span class="n">的身高是</span> <span class="mf">180.5</span> <span class="n">cm</span>
+</pre></div>
+</div>
+</section>
+<section id="id12">
+<h3>3.6 小结<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<div align="center">
+  <table style="border-collapse: collapse; width: 100%; text-align: center; font-size: 16px;">
+    <thead>
+      <tr style="background-color: #f2f2f2;">
+        <th style="border: 1px solid #ccc; padding: 10px;">用法方式</th>
+        <th style="border: 1px solid #ccc; padding: 10px;">示例</th>
+        <th style="border: 1px solid #ccc; padding: 10px;">说明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 10px;">基本输出</td>
+        <td style="border: 1px solid #ccc; padding: 10px;"><code>print("Hello")</code></td>
+        <td style="border: 1px solid #ccc; padding: 10px;">输出单个值</td>
+      </tr>
+      <tr style="background-color: #f9f9f9;">
+        <td style="border: 1px solid #ccc; padding: 10px;">多值输出</td>
+        <td style="border: 1px solid #ccc; padding: 10px;"><code>print("a =", a, ", b =", b)</code></td>
+        <td style="border: 1px solid #ccc; padding: 10px;">多个值中间默认用空格分隔</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 10px;">不换行输出</td>
+        <td style="border: 1px solid #ccc; padding: 10px;"><code>print("A", end=" ")</code></td>
+        <td style="border: 1px solid #ccc; padding: 10px;">设置 <code>end</code> 参数控制行尾字符</td>
+      </tr>
+      <tr style="background-color: #f9f9f9;">
+        <td style="border: 1px solid #ccc; padding: 10px;">格式化输出</td>
+        <td style="border: 1px solid #ccc; padding: 10px;"><code>"%.2f" % 3.14159</code></td>
+        <td style="border: 1px solid #ccc; padding: 10px;">老式格式化方式</td>
+      </tr>
+      <tr>
+        <td style="border: 1px solid #ccc; padding: 10px;">f-string</td>
+        <td style="border: 1px solid #ccc; padding: 10px;"><code>f"{name} is {age} years old"</code></td>
+        <td style="border: 1px solid #ccc; padding: 10px;">推荐格式化方式，支持表达式嵌入</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</section>
+</section>
+<section id="id13">
+<h2>4. Python的输入<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<p>  <code class="docutils literal notranslate"><span class="pre">input()</span></code> 函数用于从键盘接收用户输入，返回的内容<strong>默认是字符串类型</strong>。如果需要其他类型（如整数、浮点数），需要进行<strong>类型转换</strong>。例如：</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入年龄：&quot;</span><span class="p">)</span>    <span class="c1"># 输入的内容是字符串</span>
+<span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>                <span class="c1"># 转换为整数类型</span>
+</pre></div>
+</div>
+<blockquote>
+<div><p>📌 注意：<code class="docutils literal notranslate"><span class="pre">input()</span></code> 返回值始终是字符串，使用时需根据需求转换变量类型。</p>
+</div></blockquote>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -548,7 +713,7 @@ document.write(`
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">二、变量</p>
+        <p class="prev-next-title">变量</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -578,6 +743,16 @@ document.write(`
 </li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3. Python的输出</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.1 输出单个值</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2 输出多个值（逗号分隔）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">3.3 换行输出 与 不换行输出</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3.4 格式化输出（%格式）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-string">3.5 插值表达式（f-string）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">3.6 小结</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">4. Python的输入</a></li>
 </ul>
   </nav></div>
 

@@ -8,8 +8,9 @@ chapters:
   sections:
   - file: 1.Python/1.Base/0.Base.md
     sections:
-      - file: 1.Python/1.Base/1.先导知识.md
-      - file: 1.Python/1.Base/2.变量.ipynb
+      - file: 1.Python/1.Base/1.先导知识
+      - file: 1.Python/1.Base/2.变量
+      - file: 1.Python/1.Base/3.运算符
   - file: 1.Python/2.Numpy/0.Numpy.md
   - file: 1.Python/3.Pandas/0.Pandas.md
   - file: 1.Python/4.Matplotlib/0.Matplotlib.md
