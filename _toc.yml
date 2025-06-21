@@ -5,8 +5,9 @@ format: jb-book
 root: intro.md
 chapters:
 - file: 1.Python/0.Python.md
-#  sections:
-#  - file: 1.Python/1.Base/1.1.Introduction.md
+  sections:
+  - file: 1.Python/1.Base/1.先导知识.md
+  - file: 1.Python/1.Base/2.变量.jupyter
 - file: 6.Tool/0.Tool.md
   sections:
   - file: 6.Tool/1.Git.md
