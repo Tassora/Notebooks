@@ -395,23 +395,23 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1. 解释器和编译器的区别</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">2. Python的注释</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.1 单行注释</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2 多行注释（两种常用方式）</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">方法一：连续使用多行 <code class="docutils literal notranslate"><span class="pre">#</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">方法二：使用三引号（<code class="docutils literal notranslate"><span class="pre">'''</span></code> 或 <code class="docutils literal notranslate"><span class="pre">"""</span></code>）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2 多行注释</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.2.1：连续使用 <code class="docutils literal notranslate"><span class="pre">#</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.2.2：使用三引号</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3. Python的输出</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.1 输出单个值</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2 输出多个值（逗号分隔）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2 输出多个值</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">3.3 换行输出 与 不换行输出</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3.4 格式化输出（%格式）</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-string">3.5 插值表达式（f-string）</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">3.6 小结</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3.4 格式化输出</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">3.5 插值表达式</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">3.6 小结</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">4. Python的输入</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">4. Python的输入</a></li>
 </ul>
             </nav>
         </div>
@@ -480,21 +480,19 @@ document.write(`
 </div>
 </section>
 <section id="id4">
-<h3>2.2 多行注释（两种常用方式）<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<h3>2.2 多行注释<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
 <section id="id5">
-<h4>方法一：连续使用多行 <code class="docutils literal notranslate"><span class="pre">#</span></code><a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<h4>2.2.1：连续使用 <code class="docutils literal notranslate"><span class="pre">#</span></code><a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># 这是多行注释</span>
 <span class="c1"># 可以用于注释掉多行说明</span>
-<span class="c1"># 或屏蔽多行代码</span>
 </pre></div>
 </div>
 </section>
 <section id="id6">
-<h4>方法二：使用三引号（<code class="docutils literal notranslate"><span class="pre">'''</span></code> 或 <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code>）<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<h4>2.2.2：使用三引号<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">这是一个多行注释的例子</span>
 <span class="sd">通常用于说明模块、类或函数的用途</span>
-<span class="sd">解释器会将其视为字符串而忽略</span>
 <span class="sd">&#39;&#39;&#39;</span>
 </pre></div>
 </div>
@@ -522,18 +520,12 @@ document.write(`
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Hello, world!
-</pre></div>
-</div>
 </section>
 <section id="id9">
-<h3>3.2 输出多个值（逗号分隔）<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<h3>3.2 输出多个值<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a =&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;, b =&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span> <span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a =&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="s2">&quot;, b =&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>  <span class="c1"># 逗号分隔</span>
 </pre></div>
 </div>
 <div style="
@@ -557,16 +549,9 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;第二行&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">第一行</span>
-<span class="n">第二行</span>
-</pre></div>
-</div>
 <p><strong>不换行输出（通过 <code class="docutils literal notranslate"><span class="pre">end</span></code> 参数）：</strong></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;第一行&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;第二行&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">第一行</span> <span class="n">第二行</span>
 </pre></div>
 </div>
 <div style="
@@ -584,13 +569,10 @@ document.write(`
 </div>
 </section>
 <section id="id11">
-<h3>3.4 格式化输出（%格式）<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<h3>3.4 格式化输出<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
 <span class="n">score</span> <span class="o">=</span> <span class="mf">95.5</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;姓名：</span><span class="si">%s</span><span class="s2">，成绩：</span><span class="si">%.1f</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">score</span><span class="p">))</span>
-</pre></div>
-</div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>姓名：Alice，成绩：95.5
 </pre></div>
 </div>
 <p>格式说明：</p>
@@ -603,19 +585,16 @@ document.write(`
 <li><p><code class="docutils literal notranslate"><span class="pre">%.1f</span></code>：浮点数，保留 1 位小数</p></li>
 </ul>
 </section>
-<section id="f-string">
-<h3>3.5 插值表达式（f-string）<a class="headerlink" href="#f-string" title="Link to this heading">#</a></h3>
+<section id="id12">
+<h3>3.5 插值表达式<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Bob&quot;</span>
 <span class="n">high</span> <span class="o">=</span> <span class="mf">180.58</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2"> 的身高是 </span><span class="si">{</span><span class="n">high</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2"> cm&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Bob</span> <span class="n">的身高是</span> <span class="mf">180.5</span> <span class="n">cm</span>
-</pre></div>
-</div>
 </section>
-<section id="id12">
-<h3>3.6 小结<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<section id="id13">
+<h3>3.6 小结<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
 <div align="center">
   <table style="border-collapse: collapse; width: 100%; text-align: center; font-size: 16px;">
     <thead>
@@ -656,8 +635,8 @@ document.write(`
 </div>
 </section>
 </section>
-<section id="id13">
-<h2>4. Python的输入<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<section id="id14">
+<h2>4. Python的输入<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
 <p>  <code class="docutils literal notranslate"><span class="pre">input()</span></code> 函数用于从键盘接收用户输入，返回的内容<strong>默认是字符串类型</strong>。如果需要其他类型（如整数、浮点数），需要进行<strong>类型转换</strong>。例如：</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;请输入年龄：&quot;</span><span class="p">)</span>    <span class="c1"># 输入的内容是字符串</span>
 <span class="n">age</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>                <span class="c1"># 转换为整数类型</span>
@@ -736,23 +715,23 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1. 解释器和编译器的区别</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">2. Python的注释</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.1 单行注释</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2 多行注释（两种常用方式）</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">方法一：连续使用多行 <code class="docutils literal notranslate"><span class="pre">#</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">方法二：使用三引号（<code class="docutils literal notranslate"><span class="pre">'''</span></code> 或 <code class="docutils literal notranslate"><span class="pre">"""</span></code>）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2 多行注释</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.2.1：连续使用 <code class="docutils literal notranslate"><span class="pre">#</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.2.2：使用三引号</a></li>
 </ul>
 </li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3. Python的输出</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.1 输出单个值</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2 输出多个值（逗号分隔）</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2 输出多个值</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">3.3 换行输出 与 不换行输出</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3.4 格式化输出（%格式）</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#f-string">3.5 插值表达式（f-string）</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">3.6 小结</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3.4 格式化输出</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">3.5 插值表达式</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">3.6 小结</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">4. Python的输入</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">4. Python的输入</a></li>
 </ul>
   </nav></div>
 

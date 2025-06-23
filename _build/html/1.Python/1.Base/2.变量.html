@@ -192,6 +192,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../4.Matplotlib/0.Matplotlib.html">Matplotlib</a></li>
 </ul>
 </details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../4.Text/0.Text.html">Text</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../4.Text/1.Markdown/Markdown.html">Markdown</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../../6.Tool/0.Tool.html">Tool</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../6.Tool/1.Git.html">Git</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../6.Tool/2.Jupyterbook.html">Jupyter-Book</a></li>
@@ -298,7 +302,7 @@
       
       
       
-      <li><a href="../../_sources/1.Python/1.Base/2.变量.ipynb" target="_blank"
+      <li><a href="../../_sources/1.Python/1.Base/2.变量.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -308,7 +312,7 @@
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -414,21 +418,11 @@ document.write(`
 <h1>变量<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="id2">
 <h2>1. 变量的定义<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>              <span class="c1"># 1.定义变量</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>              <span class="c1"># 1.定义变量</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a =&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>     <span class="c1"># 2.打印变量</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">20</span>              <span class="c1"># 3.修改变量</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a =&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>     <span class="c1"># 4.打印修改后的变量</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = 10
-a = 20
-</pre></div>
-</div>
-</div>
 </div>
 <div style="
   border-left: 5px solid #1e90ff;
@@ -497,9 +491,7 @@ a = 20
 </section>
 <section id="id5">
 <h3>2.2 变量类型的定义、查看<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">100</span>                         <span class="c1"># int</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">100</span>                         <span class="c1"># int</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="s2">&quot;的类型是&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mf">3.14</span>                        <span class="c1"># float</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="s2">&quot;的类型是&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
@@ -508,16 +500,6 @@ a = 20
 <span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span>             <span class="c1"># str</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="s2">&quot;的类型是&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100 的类型是 &lt;class &#39;int&#39;&gt;
-3.14 的类型是 &lt;class &#39;float&#39;&gt;
-True 的类型是 &lt;class &#39;bool&#39;&gt;
-Hello, World! 的类型是 &lt;class &#39;str&#39;&gt;
-</pre></div>
-</div>
-</div>
 </div>
 <div style="
   border-left: 5px solid #1e90ff;
@@ -539,20 +521,10 @@ Hello, World! 的类型是 &lt;class &#39;str&#39;&gt;
 </section>
 <section id="id6">
 <h3>2.3 变量类型转换<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">10.1</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">10.1</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="s2">&quot;的类型是&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">),</span><span class="s2">&quot;的类型是&quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">)))</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10.1 的类型是 &lt;class &#39;float&#39;&gt;
-10 的类型是 &lt;class &#39;int&#39;&gt;
-</pre></div>
-</div>
-</div>
 </div>
 <p>  在 Python 中，不同类型的变量可以通过内置函数进行转换，常见的转换函数如下：</p>
 <div align="center">
@@ -594,9 +566,8 @@ Hello, World! 的类型是 &lt;class &#39;str&#39;&gt;
   </table>
 </div>
 <br>
-<br><div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">10.9</span>
+<br>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mf">10.9</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a = 10.9, 转化后int(a) =&quot;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>    <span class="c1"># 转为整数：10</span>
 <span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;123&quot;</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b = &#39;123&#39;，转化后 int(b) =&quot;</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>  <span class="c1"># 字符串转整数：123</span>
@@ -605,16 +576,6 @@ Hello, World! 的类型是 &lt;class &#39;str&#39;&gt;
 <span class="n">d</span> <span class="o">=</span> <span class="mi">3</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;d = 3, 转化后float(d) =&quot;</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>   <span class="c1"># 转为浮点数：3.0</span>
 </pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a = 10.9, 转化后int(a) = 10
-b = &#39;123&#39;，转化后 int(b) = 123
-c = 0, 转化后bool(c) = False
-d = 3, 转化后float(d) = 3.0
-</pre></div>
-</div>
-</div>
 </div>
 <div style="
   border-left: 4px solid #007acc;

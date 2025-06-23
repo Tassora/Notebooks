@@ -14,7 +14,9 @@ chapters:
   - file: 1.Python/2.Numpy/0.Numpy.md
   - file: 1.Python/3.Pandas/0.Pandas.md
   - file: 1.Python/4.Matplotlib/0.Matplotlib.md
-
+- file: 4.Text/0.Text.md
+  sections:
+  - file: 4.Text/1.Markdown/Markdown.md
 - file: 6.Tool/0.Tool.md
   sections:
   - file: 6.Tool/1.Git.md
